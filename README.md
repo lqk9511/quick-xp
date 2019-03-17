@@ -1,2 +1,3 @@
-# quick-vue-web
+# quick-xp
+
 A vue project template
