@@ -1,9 +1,7 @@
 import Vue from 'vue'
-import App from './App'
-import Mixin from './mixin'
+import App from './App.vue'
 
 Vue.config.productionTip = false
-Vue.mixin(Mixin)
 
 new Vue({
   render: h => h(App)

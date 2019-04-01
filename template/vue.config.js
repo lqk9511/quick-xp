@@ -5,9 +5,8 @@ const publicPath = process.env.NODE_ENV !== 'development' ? '././' : ''
 
 const getPages = () => {
   const entry = {
-    main: {
-      entry: 'src/main.js',
-      filename: 'main.html'
+    index: {
+      entry: 'src/app.js'
     }
   }
 
@@ -28,6 +27,7 @@ module.exports = {
   publicPath,
   pages,
   productionSourceMap: false,
+  indexPath: 'main.html',
   css: {
     loaderOptions: {
       sass: {

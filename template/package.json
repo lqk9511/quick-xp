@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "vconsole": "^3.3.0",
     "vue": "^2.6.6"
   },
   "devDependencies": {
