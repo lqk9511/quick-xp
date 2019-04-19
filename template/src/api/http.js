@@ -23,7 +23,12 @@ Axios.interceptors.response.use(
     return resopnse.data
   },
   error => {
-    return error
+    const res = error.response || {}
+    const data = res.data || {}
+    const code = data.code || 404
+    const message = data.message || data.desc || '请求出错啦^o^'
+
+    return { code, message }
   }
 )
 

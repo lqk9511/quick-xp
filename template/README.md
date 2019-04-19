@@ -5,12 +5,15 @@
 ## Build Setup
 
 ```bash
-# install dependencies
-npm install # or yarn
+# 安装依赖
+npm install # 或者使用 yarn
 
-# serve with hot reload at localhost:8080
+# 启动服务 localhost:8080
 npm run serve
 
-# build for production with minification
+# 编译运行于测试环境
+npm run staging
+
+# 编译运行于正式环境
 npm run build
 ```
