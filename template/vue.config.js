@@ -6,7 +6,7 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        data: '@import "@/styles/variables.scss";'
+        data: `@import "@/styles/variables.scss"; $userSelect: ${process.env.VUE_APP_USER_SELECT || 'none'};`
       }
     }
   }{{#if_neq devProxyUrl ""}},

@@ -12,6 +12,9 @@ npm install # 或者使用 yarn
 npm run serve
 
 # 编译运行于测试环境
+npm run test
+
+# 编译运行于预生产环境
 npm run staging
 
 # 编译运行于正式环境
