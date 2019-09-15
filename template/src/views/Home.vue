@@ -1,7 +1,6 @@
 <template>
   <div class="page-container">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <h1>Home</h1>
+    your project start at here
   </div>
 </template>
 
