@@ -28,6 +28,7 @@ module.exports = {
     }
   }{{/if_neq}},
   configureWebpack: config => {
+    config.entry.app = ['./src/main.ts']
     config.plugins.push(new GenerateAssetPlugin({
       filename: 'config.json',
       fn: (compilation, cb) => {
