@@ -23,7 +23,8 @@ npm run build
 # 1.在script文件夹下放置goctl可执行文件
 
 # 2.正确配置.gitmodules
-
+git submodule init
+git submodule add git@47.97.170.255:xiao/api.git
 # 初始化
 make init
 
