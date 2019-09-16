@@ -34,5 +34,6 @@ module.exports = {
         cb(null, createJson(compilation))
       }
     }))
+    config.module.rules[1].use.push('image-webpack-loader')
   }
 }
