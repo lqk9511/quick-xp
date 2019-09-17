@@ -18,6 +18,7 @@
     "baseUrl": "./src", // 解析非相对模块名的基准目录。
     "types": ["webpack-env", "vue"], // 要包含的类型声明文件名列表。查看https://www.tslang.cn/docs/handbook/tsconfig-json.html#types-typeroots-and-types
     "typeRoots": ["./types", "./node_modules/vue/types"],
+    "noImplicitThis": true,
     "paths": {
       // 声明映射 https://www.tslang.cn/docs/handbook/module-resolution.html#base-url
       "@/*": ["src/*"]
