@@ -13,5 +13,7 @@ export default {
 <style lang="scss">
 .page-container {
   text-align: center;
+  padding-top: 50px;
+  font-size: 20px;
 }
 </style>
