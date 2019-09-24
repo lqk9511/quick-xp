@@ -3,8 +3,8 @@ export PATH := $(shell pwd)/node_modules/.bin:$(PATH)
 
 # 项目初始化
 init:
-	git submodule init
-	git submodule update
+	git submodule update --init --recursive
+	chmod 777 ./api/script/goctl
 	yarn
 	
 # 开发模式
@@ -15,7 +15,7 @@ dev:init
 build:clean
 	make init
 	yarn run build
-	# rm -rf dist/js/*.map
+	rm -rf dist/js/*.map
 
 clean:
 	rm -rf dist
