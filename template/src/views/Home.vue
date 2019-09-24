@@ -1,7 +1,6 @@
 <template>
   <div class="page-container">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <h1>Home</h1>
+    your project start at here
   </div>
 </template>
 
@@ -14,5 +13,7 @@ export default {
 <style lang="scss">
 .page-container {
   text-align: center;
+  padding-top: 50px;
+  font-size: 20px;
 }
 </style>
