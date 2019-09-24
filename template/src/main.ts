@@ -4,6 +4,7 @@ import router from './router'
 import xp from '@heibanfe/xp-sdk'
 import * as Sentry from '@sentry/browser'
 import * as Integrations from '@sentry/integrations'
+import sentryConfig from './config/sentry.config'
 
 Vue.config.productionTip = false
 const env = process.env.NODE_ENV === 'development'
@@ -19,12 +20,11 @@ xp.config({
     created() {
       if (!env) {
         xp.getAppInfo().then(({ environment: appEnv }) => {
-          const isUat = !appEnv || appEnv === 'unknow' || appEnv === 'debug' || appEnv === 'development'
-          const dsn = isUat ? 'https://4801b1499eb04846915dc3adae986021@sentry.xiaoheiban.cn/5' : 'https://46b5c12b52084c71a5930c6fb2d1fdd6@sentry.xiaoheiban.cn/8'
-
+          const isPro = appEnv === 'production'
+          const dsn = isPro ? sentryConfig.onlineDSN : sentryConfig.uatDSN
           Sentry.init({
             dsn,
-            environment: process.env.VUE_APP_APP_ID,
+            environment: `${process.env.VUE_APP_APP_ID}_${appEnv}`,
             integrations: [new Integrations.Vue({ Vue, attachProps: true })],
             release: process.env.VUE_APP_APP_ID
           })

@@ -27,7 +27,8 @@ git submodule init
 git submodule add git@47.97.170.255:xiao/api.git
 # 初始化
 make init
-
+# sentry
+在项目目录下创建config文件夹，放置sentry.properties文件
 # 生成api
 make api
 
